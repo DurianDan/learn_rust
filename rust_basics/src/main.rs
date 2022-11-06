@@ -30,16 +30,17 @@ fn main() {
         // println!("_________________________")
     }
     {
-        println!("Lesson 6: Functions, Expressions, Statements");
-        println!("____________________");
-        functions();
+        // println!("Lesson 6: Functions, Expressions, Statements");
+        // println!("____________________");
+        // functions();
     }
+    my_own();
 }
 
 fn print_type_of<T>(_: &T) {
     // A function to get the type of the variable
     // the type of a var is not preserved after compiling
-    // so, when creating the ouput, this function returns the best guess, 
+    // so, when creating the ouput, this function returns the best guess,
     // not 100% correct, and meant for debugging
     println!("{}", std::any::type_name::<T>())
 }
@@ -205,14 +206,14 @@ fn conditions_control_flow() {
 // functions() is a statement, it do something, but not returning anything
 // expression will return something, and it may or may not effect the var parsed
 fn functions() {
-    // I. Functions 
+    // I. Functions
     {
         fn inside_function(x: i32,y: i8) -> i32{
             if 8 == 8 {
-                x + y as i32
+                return x + y as i32;
             }
             else{
-                x - y as i32
+                return x - y as i32;
             }
         }
         println!("{}",inside_function(2,8));
@@ -227,12 +228,21 @@ fn functions() {
             io::stdin()
                 .read_line(&mut x)
                 .expect("this is not dae way");
-            
-            x.trim()
-             .parse()
-             .unwrap()
+
+            x.trim().parse().unwrap()
         };
 
-        println!("{}",x*2);
     }
+}
+fn my_own(){
+    let mut x: i32 = {
+        let mut x: String = String::new();
+        io::stdin()
+            .read_line(&mut x)
+            .expect("This is not de wae");
+
+        x.trim().parse().unwrap()
+    };
+
+    println!("this is an i32 variable: {}",x);
 }
