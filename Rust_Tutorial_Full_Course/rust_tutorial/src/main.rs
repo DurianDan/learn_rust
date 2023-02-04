@@ -10,7 +10,54 @@ use std::cmp::Ordering;
 
 use rand::Rng;
 
-fn main(){ 
+
+
+fn SEVEN_strings(){
+    // String is a vector of mutable bytes
+    // &str is a view of a string, which is immutable
+    let mut st1: String = String::new();
+    st1.push('F'); // append a char to the end of a String
+    st1.push_str(" Second_Word"); // append a String to the end of a String
+
+    let st2 = st1.replace("F", "First_Word");
+
+    for (idx,word) in st2.split_whitespace().enumerate() {
+        println!("element {}: {}", idx,word);
+    }
+
+    //  working with String
+    let mut st3: String = String::from("Huy NV Done NV");
+    /// turn String to a vector of each character, to sort the chars
+    let mut st3_vect: Vec<char> = st3.chars().collect();
+
+    st3_vect.sort(); // sort a vector
+    st3_vect.dedup(); // remove duplicated elements in a vector
+    for ch in st3_vect{
+        println!("{}",&ch);
+    }
+    /// slice the String
+    println!("{}", &st3[0..3]);
+    
+    st3.clear(); // clear the content of a String
+    
+    // Combine strings
+    let st4: String = String::from("Huy");
+    let st5: String = String::from(" NV");
+    let st6: String = st4 + &st5;
+    let st6_chars: Vec<char> = st6.chars().collect();
+        // the String st4 has been consumned, being part of the st6
+        // &st5 is just a reference to the String st5, this string is still allocated on RAM
+    for (idx,unicode_num) in st6.bytes().enumerate(){
+            // bytes return unicode number of the char
+            // char can also be turned into bytes by changing the type into u32
+        println!("unicode number of the char {} is {}",
+                    st6_chars[idx], unicode_num);
+    }
+    
+
+}
+
+fn SIX_tuple(){ 
     // Tuple can't be mutable
     // every element's type needs to declared before hand 
     let my_tuple: (u8,String, f32) = (2,"Huy NV".to_string(), -90.8);
@@ -24,7 +71,7 @@ fn main(){
 
 }
 
-fn FIVE_arrays(){ // arrays can be mutable
+fn FIVE_arrays_loops(){ // arrays can be mutable
     let mut arr: [i8;5] = [3,4,5,80,7];
     let mut loop_idx: usize = 0;
 
