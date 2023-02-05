@@ -1,0 +1,1 @@
+/home/durian/learning/RUST_TUTORIAL/Rust_Tutorial_Full_Course/rust_tutorial/target/debug/first_8_lessons: /home/durian/learning/RUST_TUTORIAL/Rust_Tutorial_Full_Course/rust_tutorial/src/bin/first_8_lessons.rs

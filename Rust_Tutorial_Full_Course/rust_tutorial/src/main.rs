@@ -1,15 +1,22 @@
 // https://www.youtube.com/watch?v=ygL_xcavzQ4&t=177s
-// from 51:50 to 1:07:55
+// from 1:19:58
 
 #![allow(unused)]
-#![allow(non_snake_case)] // disable warnings for camel cases
-
-use std::io;
-use std::io::{Write,BufReader, BufRead, ErrorKind};
-use std::fs::File;
-use std::cmp::Ordering;
-use rand::Rng;
+use std::collections::HashMap;
 
 fn main(){
-    println!("Hello");
+    // hashmaps
+    let mut heroes_name: HashMap<&str, &str> = HashMap::new();
+    heroes_name.insert("Endeavor", "Enji Todoroki");
+    heroes_name.insert("Batman", "Bruce Wayne");
+    heroes_name.insert("Mugiwara", "Monkey D. Luffy");
+
+    println!("number of heroes is {}", heroes_name.len());
+    println!("Spiderman is in the list: {}",
+            heroes_name.contains_key(&"Spiderman"));
+    println!("The realname of Endeavor is {:?}", 
+            heroes_name.get(&"Endeavor"));
+    for (hero, name) in heroes_name.iter(){
+        println!("Real name of {} is {}", hero, name);
+    }
 }
