@@ -3,5 +3,12 @@
 
 fn main(){
     // iterators
-    println!("variables");
+    let mut arr: [i8;4] = [1,2,3,4];
+    let mut idx: i32 = 0;
+    for val in &mut arr{
+        println!("Index {}, value: {}", &idx,val);
+        *val *= 2;
+        idx += 1;
+    }
+    println!("{}",arr[1]);
 }
