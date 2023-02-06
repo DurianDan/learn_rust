@@ -1,0 +1,1 @@
+/home/new-user/learn/learn_rust/Rust_Tutorial_Full_Course/rust_tutorial/target/debug/fifth_straits_structs_hashmaps: /home/new-user/learn/learn_rust/Rust_Tutorial_Full_Course/rust_tutorial/src/bin/fifth_straits_structs_hashmaps.rs
