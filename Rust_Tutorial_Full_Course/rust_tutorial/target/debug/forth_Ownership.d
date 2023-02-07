@@ -1,1 +1,0 @@
-/home/new-user/learn/learn_rust/Rust_Tutorial_Full_Course/rust_tutorial/target/debug/forth_Ownership: /home/new-user/learn/learn_rust/Rust_Tutorial_Full_Course/rust_tutorial/src/bin/forth_Ownership.rs
