@@ -1,1 +1,1 @@
-/home/new-user/learn/learn_rust/Rust_Tutorial_Full_Course/rust_tutorial_2/target/debug/sixth_errorHandling_files: /home/new-user/learn/learn_rust/Rust_Tutorial_Full_Course/rust_tutorial_2/src/bin/sixth_errorHandling_files.rs
+/home/durian/learning/RUST_TUTORIAL/Rust_Tutorial_Full_Course/rust_tutorial_2/target/debug/sixth_errorHandling_files: /home/durian/learning/RUST_TUTORIAL/Rust_Tutorial_Full_Course/rust_tutorial_2/src/bin/sixth_errorHandling_files.rs
