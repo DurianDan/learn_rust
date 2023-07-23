@@ -1,0 +1,22 @@
+[package]
+name = "to-do"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-rt = "2.8.0" # to run the rust server, kinda like unicorn with fastapi
+actix-web = "4.3.1" # to actualy perform actix functions
+serde = { version = "1.0.160", features = ["derive"]}
+# `version` is the version of the package
+# `features` is for additional functions of the package that the compiler will add in
+# the "derive" feature is for automatically derive the seriallization methods for objects (like enums or structs)
+
+# dependencies for configuration
+dotenv = "0.15.0"
+config = "0.13.3"
+tokio-pg-mapper = "0.2.0"
+tokio-pg-mapper-derive = "0.2.0"
+deadpool-postgres = "0.9.0"
+tokio-postgres = "0.7.8"
