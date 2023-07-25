@@ -1,21 +1,16 @@
-mod modules;
+mod models;
 mod config;
+mod handlers; 
 
-use crate::modules::Status;
+use crate::handlers::status;
 use actix_web::{
     HttpServer,
-    HttpResponse,
     App,
-    web,
-    Responder};
+    web};
 use std::io;
 use dotenv::dotenv;
 use tokio_postgres::NoTls;
 
-async fn status() -> impl Responder{
-    HttpResponse::Ok()
-        .json(Status{user: "Huy".to_string()})
-}
 
 #[actix_rt::main]
 async fn main() -> io::Result<()>{
