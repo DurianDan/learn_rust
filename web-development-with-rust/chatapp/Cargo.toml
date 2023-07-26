@@ -7,6 +7,9 @@ edition = "2021"
 
 [dependencies]
 rocket = {version = "0.4.11", features = ["json"]}
-
+# TODO: resolve version conflicts with `rockets`
+# compiler error message when encountering rocket:
+#   the package `chatapp` depends on `rocket`,
+#   with features: `json` but `rocket`does not have these features.
 [dev-dependencies]
 rand = "0.8" #for testing

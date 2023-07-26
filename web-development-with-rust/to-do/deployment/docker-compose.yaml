@@ -1,0 +1,15 @@
+version: "3"
+services:
+  postgres:
+    build:
+     context: ..
+     dockerfile: ./deployment/dockerfiles/postgres.Dockerfile
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: actix
+      POSTGRES_USER: actix
+      POSTGRES_DB: actix
+    ports:
+      - 5432:5432
+    # command: 
+    #   - psql -h 0.0.0.0 -p 5432 -u $POSTGRES_USER $POSTGRES_PASSWORD < database.sql
